@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section>
+        <form name="calculadora" id="calculadora">
+            <input name="display" class="display" type="textfield" readonly placeholder="0" />
+            <div class="teclado">
+                <input id="btnOnOff" class="btn" type="button" value="O/I" onclick="document.calculadora.display=displayOnOff()">
+                <input class="btn" type="reset" value="C" onclick="document.calculadora.display.value +=('C')">
+                <input class="btn" type="button" value="%" onclick="document.calculadora.display.value +=('%')">
+                <input class="btn" type="button" value="/" onclick="document.calculadora.display.value +=('/')">
+
+                <input class="btn btnNumero" type="button" value="7" onclick="document.calculadora.display.value +=(7)">
+                <input class="btn btnNumero" type="button" value="8" onclick="document.calculadora.display.value +=(8)">
+                <input class="btn btnNumero" type="button" value="9" onclick="document.calculadora.display.value +=(9)">
+                <input class="btn" type="button" value="X" onclick="document.calculadora.display.value +=('*')">
+
+                <input class="btn btnNumero" type="button" value="4" onclick="document.calculadora.display.value +=(4)">
+                <input class="btn btnNumero" type="button" value="5" onclick="document.calculadora.display.value +=(5)">
+                <input class="btn btnNumero" type="button" value="6" onclick="document.calculadora.display.value +=(6)">
+                <input class="btn" type="button" value="-" onclick="document.calculadora.display.value +=('-')">
+
+                <input class="btn btnNumero" type="button" value="1" onclick="document.calculadora.display.value +=(1)">
+                <input class="btn btnNumero" type="button" value="2" onclick="document.calculadora.display.value +=(2)">
+                <input class="btn btnNumero" type="button" value="3" onclick="document.calculadora.display.value +=(3)">
+                <input class="btn" type="button" value="+" onclick="document.calculadora.display.value +=('+')">
+
+                <input class="btn btnNumero" type="button" value="00" onclick="document.calculadora.display.value +=('00')">
+                <input class="btn btnNumero" type="button" value="0" onclick="document.calculadora.display.value +=(0)">
+                <input class="btn btnNumero" type="button" value="."onclick="document.calculadora.display.value +=('.')">
+                <input class="btn" id="igual" type="button" value="="onclick="document.calculadora.display.value = eval(document.calculadora.display.value)">
+            </div>
+        </form>
+    </section>
+    <!-- scripts -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
